@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        function countwords()
+        {
+            var text = document.getElementById("InputTextField").value;
+            var numwords = 0;
+            for(var i=0; i<text.length; i++)
+            {
+                var currentCharacter = text[i];
+                if(currentCharacter == " ")
+                {
+                    numwords += 1
+                }
+            }
+            numwords += 1
+            document.getElementById("numwordsOutput").innerHTML = numwords + "word";
+        }
+    </script>
+    <script>
+        function uniquewordcount(str){
+            let set = new set();
+            let words = str.split(' ');
+            for(let i=1; i<words.length; i++){
+                set.add(words[i]);
+            }
+            return set.size;
+            document.getElementById("numuniquewords").innerHTML = numwords + "word";
+        }
+    </script>
+    <body>
+        <h1>User Input</h1>
+        <textarea id="InputTextField" rows=10 cols=70></textarea>
+        <br><br>
+        <button onclick="countwords()">Word Counts</button>
+        <button onclick="Uniquewords()">Unique Word</button>
+        <button onclick="Titleinputtext()">Title Input Text</button>
+        <br><br>
+        <body>
+        <div id="numwordsOutput"></div>
+        <h1>Result For Selected Action</h1>
+        <textarea id="InputTextField" rows=10 cols=70></textarea>
+        
+    </body>
+</html>
